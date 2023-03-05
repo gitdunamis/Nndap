@@ -1,0 +1,28 @@
+# POST http://127.0.0.1:5000/api/cow
+# content-type: application/json
+
+# {
+#     "name": "Bam",
+#     "sex": "male",
+#     "birthdate": "2022",
+#     "condition": "unhealthy",
+#     "weight": {
+#         "mass_kg": 10,
+#         "last_measured": "2021"
+#     },
+#     "feeding": {
+#         "amount_kg": 5,
+#         "cron_schedule": "0 0 0 0",
+#         "last_measured": "2023"
+#     },
+#     "milk_production": {
+#         "last_milk": "2023",
+#         "cron_schedule": "0 1 1 1",
+#         "amount_l": 10
+#     },
+#     "has_calves": true
+# }
+
+
+GET http://127.0.0.1:5000/api/cow/5
+
