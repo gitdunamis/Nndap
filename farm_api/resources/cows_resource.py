@@ -25,27 +25,21 @@ class CowsResource(Resource):
         :param id: Cow ID to retrieve, this path parameter is optional
         :return: Cow, 200 HTTP status code
         """
-        # if not id:
-
-        #     filters = {k: v for k, v in request.args if v is not None}
-        #     return db.query(Cow).filter_by(**filters).all()
-
-        #     return self._get_all_cows(), 200
-
-        # logger.info(f"Retrieving cows by id {id}")
-
-        try:
-            return self._get_cow_by_id(id), 200
-        except NoResultFound:
-            abort(404, message="Cow not found")
+        if not id:
+            return self._get_all_cows(), 200
+        else :
+            try:
+                return self._get_cow_by_id(id), 200
+            except NoResultFound:
+                abort(404, message="Cow not found")
 
     def _get_cow_by_id(self, cow_id):
         cow = Cow.query.filter_by(cow_id=cow_id).first()
-        print("vv", cow)
-        # cow_json = CowSchema().dump(cow)
-        cow_json = self.cow_to_schema(cow)
-        if not cow_json:
+
+        if not cow:
             raise NoResultFound()
+
+        cow_json = self.cow_to_schema(cow)
 
         logger.info(f"Cow retrieved from database {cow_json}")
         return cow_json.dump()
@@ -54,11 +48,11 @@ class CowsResource(Resource):
       
         cows = Cow.query.all()
 
-        cows_json = [cow_to_schema(cow) for cow in cows]
-        logger.info("Cows successfully retrieved.")
+        cows_json = [self.cow_to_schema(cow).dump() for cow in cows]
+        logger.info("Cows successfully retrieved.", cows_json)
         return cows_json
 
-    def _delete_cow(self, id):
+    def delete(self, id):
         cow = Cow.query.get_or_404(id)
         db.session.delete(cow)
         db.session.commit()
@@ -70,31 +64,15 @@ class CowsResource(Resource):
 
         :return: Cow.cow, 201 HTTP status code.
         """
-        cow = CowSchema().load(request.get_json())
-        # cows_json = CowSchema().dump(cow)
-        cows_json = CowSchema().dump(cow)
 
         data = request.get_json()
 
-        new_cow = Cow()
-        new_cow.birthdate = data['birthdate']
-        new_cow.name = data['name']
-        new_cow.has_calves = data['has_calves']
-        new_cow.condition = data['condition']
-        new_cow.sex = data['sex']
-        new_cow.milk_prod_amount_l = data['milk_production']['amount_l']
-        new_cow.milk_prod_last_milk = data['milk_production']['last_milk']
-        new_cow.milk_prod_cron_schedule = data['milk_production']['cron_schedule']
-        new_cow.weight_last_measured = data['weight']['last_measured']
-        new_cow.weight_mass_kg = data['weight']['mass_kg']
-        new_cow.feeding_cron_schedule = data['feeding']['cron_schedule']
-        new_cow.feeding_last_measured = data['feeding']['last_measured']
-        new_cow.feeding_amount_kg = data['feeding']['amount_kg']
-
+        cow = self.schema_to_cow(data)
 
         try:
-            db.session.add(new_cow)
+            db.session.add(cow)
             db.session.commit()
+            cow_json = self.cow_to_schema(cow).dump()
         except IntegrityError as e:
             logger.warning(
                 f"Integrity Error, this team is already in the database. Error: {e}"
@@ -102,23 +80,27 @@ class CowsResource(Resource):
 
             abort(500, message="Unexpected Error!")
         else:
-            return cows_json, 201
+            return cow_json, 201
 
-    def patch(self, cow_id):
-        cow = Cow.query.filter_by(cow_id=cow_id).first()
+    def patch(self, id):
+        cow = Cow.query.filter_by(cow_id=id).first()
+
+        if not cow:
+            raise NoResultFound()
 
         if 'name' in request.json:
             cow.name = request.json['name']
         if 'sex' in request.json:
             cow.sex = request.json['sex']
 
-        cow_json = CowSchema().dump(cow)
+        cow_json = self.cow_to_schema(cow).dump()
 
         db.session.commit()
         return cow_json
 
-    def cow_to_schema(self, cow:Cow):
+    def cow_to_schema(self, cow:Cow) -> CowSchema:
         new_cow = CowSchema()
+        new_cow.cow_id = cow.cow_id
         new_cow.birthdate = cow.birthdate
         new_cow.name = cow.name
         new_cow.has_calves = cow.has_calves
@@ -143,13 +125,10 @@ class CowsResource(Resource):
         new_cow.feeding = feeding
         new_cow.milk_production = milk_production
         new_cow.weight = weight
-        print("oldvv", cow)
 
-        print("newvv", new_cow)
         return new_cow
 
-    def schema_to_cow():
-
+    def schema_to_cow(self, data: dict) -> Cow:
         new_cow = Cow()
         new_cow.birthdate = data['birthdate']
         new_cow.name = data['name']
@@ -164,4 +143,4 @@ class CowsResource(Resource):
         new_cow.feeding_cron_schedule = data['feeding']['cron_schedule']
         new_cow.feeding_last_measured = data['feeding']['last_measured']
         new_cow.feeding_amount_kg = data['feeding']['amount_kg']
-        return
+        return new_cow

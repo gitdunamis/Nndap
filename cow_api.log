@@ -2729,3 +2729,300 @@ werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server e
 03-05 20:43 werkzeug     INFO     127.0.0.1 - - [05/Mar/2023 20:43:16] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
 03-05 20:43 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f78f00ce4c0>
 03-05 20:43 werkzeug     INFO     127.0.0.1 - - [05/Mar/2023 20:43:18] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 00:26 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 00:26 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 00:26 werkzeug     INFO      * Restarting with stat
+03-06 00:26 werkzeug     WARNING   * Debugger is active!
+03-06 00:26 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 00:26 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 00:26:45] "[33mGET /?vscodeBrowserReqId=1678062395737 HTTP/1.1[0m" 404 -
+03-06 00:33 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7ff0cacf9210>
+03-06 00:33 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 00:33:34] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 00:34 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/cow_schema.py', reloading
+03-06 00:34 werkzeug     INFO      * Restarting with stat
+03-06 00:34 werkzeug     WARNING   * Debugger is active!
+03-06 00:34 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 00:48 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7fe20feb5ed0>
+03-06 00:48 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 00:48:53] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 00:57 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 00:57 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 00:57 werkzeug     INFO      * Restarting with stat
+03-06 00:57 werkzeug     WARNING   * Debugger is active!
+03-06 00:57 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 00:57 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f94296a4750>
+03-06 00:57 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 00:57:53] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:07 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/cow_schema.py', reloading
+03-06 01:07 werkzeug     INFO      * Restarting with stat
+03-06 01:07 werkzeug     WARNING   * Debugger is active!
+03-06 01:07 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:07 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f57ed8c3a10>
+03-06 01:07 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:07:10] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:08 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/feeding_schema.py', reloading
+03-06 01:08 werkzeug     INFO      * Restarting with stat
+03-06 01:08 werkzeug     WARNING   * Debugger is active!
+03-06 01:08 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:08 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f243d3587d0>
+03-06 01:08 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:08:27] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:09 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/feeding_schema.py', reloading
+03-06 01:09 werkzeug     INFO      * Restarting with stat
+03-06 01:09 werkzeug     WARNING   * Debugger is active!
+03-06 01:09 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:09 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f05982b01d0>
+03-06 01:09 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:09:17] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:10 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/feeding_schema.py', reloading
+03-06 01:10 werkzeug     INFO      * Restarting with stat
+03-06 01:10 werkzeug     WARNING   * Debugger is active!
+03-06 01:10 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:10 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7eff86360290>
+03-06 01:10 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:10:13] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:12 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 01:12 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 01:12 werkzeug     INFO      * Restarting with stat
+03-06 01:12 werkzeug     WARNING   * Debugger is active!
+03-06 01:12 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:12 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7fe21e084250>
+03-06 01:12 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:12:40] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:13 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/milk_prod_schema.py', reloading
+03-06 01:13 werkzeug     INFO      * Restarting with stat
+03-06 01:13 werkzeug     WARNING   * Debugger is active!
+03-06 01:13 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:13 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7fcdada9ea10>
+03-06 01:13 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:13:33] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:13 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/milk_prod_schema.py', reloading
+03-06 01:13 werkzeug     INFO      * Restarting with stat
+03-06 01:13 werkzeug     WARNING   * Debugger is active!
+03-06 01:13 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:14 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7fd59e22c250>
+03-06 01:14 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:14:02] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:14 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/weight_schema.py', reloading
+03-06 01:14 werkzeug     INFO      * Restarting with stat
+03-06 01:14 werkzeug     WARNING   * Debugger is active!
+03-06 01:14 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:14 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f759d93c250>
+03-06 01:14 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:14:41] "[35m[1mGET /api/cow/5 HTTP/1.1[0m" 500 -
+03-06 01:14 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/weight_schema.py', reloading
+03-06 01:14 werkzeug     INFO      * Restarting with stat
+03-06 01:14 werkzeug     WARNING   * Debugger is active!
+03-06 01:14 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:14 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7fb552680250>
+03-06 01:14 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:14:59] "GET /api/cow/5 HTTP/1.1" 200 -
+03-06 01:15 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7fb552675cd0>
+03-06 01:15 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:15:20] "GET /api/cow/2 HTTP/1.1" 200 -
+03-06 01:22 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 01:22 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 01:22 werkzeug     INFO      * Restarting with stat
+03-06 01:22 werkzeug     WARNING   * Debugger is active!
+03-06 01:22 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:22 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:22:55] "[33mGET /api/cow/ HTTP/1.1[0m" 404 -
+03-06 01:26 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:26:22] "[35m[1mGET /api/cow HTTP/1.1[0m" 500 -
+03-06 01:35 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 01:35 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 01:35 werkzeug     INFO      * Restarting with stat
+03-06 01:37 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 01:37 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 01:37 werkzeug     INFO      * Restarting with stat
+03-06 01:37 werkzeug     WARNING   * Debugger is active!
+03-06 01:37 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:38 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 01:38 werkzeug     INFO      * Restarting with stat
+03-06 01:39 werkzeug     WARNING   * Debugger is active!
+03-06 01:39 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:39 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:39:11] "[35m[1mGET /api/cow HTTP/1.1[0m" 500 -
+03-06 01:54 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 01:54 werkzeug     INFO      * Restarting with stat
+03-06 01:54 werkzeug     WARNING   * Debugger is active!
+03-06 01:54 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:54 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 01:54 werkzeug     INFO      * Restarting with stat
+03-06 01:54 werkzeug     WARNING   * Debugger is active!
+03-06 01:54 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:54 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 01:54 werkzeug     INFO      * Restarting with stat
+03-06 01:54 werkzeug     WARNING   * Debugger is active!
+03-06 01:54 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:54 farm_api.resources.cows_resource INFO     Cows successfully retrieved.
+03-06 01:54 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:54:45] "[35m[1mGET /api/cow HTTP/1.1[0m" 500 -
+03-06 01:56 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 01:56 werkzeug     INFO      * Restarting with stat
+03-06 01:56 werkzeug     WARNING   * Debugger is active!
+03-06 01:56 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:56 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:56:22] "[35m[1mGET /api/cow/1 HTTP/1.1[0m" 500 -
+03-06 01:56 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 01:56 werkzeug     INFO      * Restarting with stat
+03-06 01:56 werkzeug     WARNING   * Debugger is active!
+03-06 01:56 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:56 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f780b666a10>
+03-06 01:56 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:56:54] "GET /api/cow/1 HTTP/1.1" 200 -
+03-06 01:57 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:57:03] "[33mGET /api/cow/ HTTP/1.1[0m" 404 -
+03-06 01:57 farm_api.resources.cows_resource INFO     Cows successfully retrieved.
+03-06 01:57 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:57:30] "[35m[1mGET /api/cow HTTP/1.1[0m" 500 -
+03-06 01:59 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 01:59 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 01:59 werkzeug     INFO      * Restarting with stat
+03-06 01:59 werkzeug     WARNING   * Debugger is active!
+03-06 01:59 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 01:59 farm_api.resources.cows_resource INFO     Cows successfully retrieved.
+03-06 01:59 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 01:59:14] "[35m[1mGET /api/cow HTTP/1.1[0m" 500 -
+03-06 02:00 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:00 werkzeug     INFO      * Restarting with stat
+03-06 02:00 werkzeug     WARNING   * Debugger is active!
+03-06 02:00 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:01 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:01 werkzeug     INFO      * Restarting with stat
+03-06 02:01 werkzeug     WARNING   * Debugger is active!
+03-06 02:01 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:01 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:01:11] "[35m[1mGET /api/cow HTTP/1.1[0m" 500 -
+03-06 02:01 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:01 werkzeug     INFO      * Restarting with stat
+03-06 02:01 werkzeug     WARNING   * Debugger is active!
+03-06 02:01 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:01 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:01:46] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:02 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:02:40] "[35m[1mPOST /api/cow HTTP/1.1[0m" 500 -
+03-06 02:04 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:04 werkzeug     INFO      * Restarting with stat
+03-06 02:04 werkzeug     WARNING   * Debugger is active!
+03-06 02:04 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:07 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:07 werkzeug     INFO      * Restarting with stat
+03-06 02:07 werkzeug     WARNING   * Debugger is active!
+03-06 02:07 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:08 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:08 werkzeug     INFO      * Restarting with stat
+03-06 02:08 werkzeug     WARNING   * Debugger is active!
+03-06 02:08 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:08 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:08 werkzeug     INFO      * Restarting with stat
+03-06 02:08 werkzeug     WARNING   * Debugger is active!
+03-06 02:08 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:08 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:08:29] "[31m[1mPOST /api/cow HTTP/1.1[0m" 400 -
+03-06 02:09 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:09:17] "[35m[1mPOST /api/cow HTTP/1.1[0m" 500 -
+03-06 02:10 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:10 werkzeug     INFO      * Restarting with stat
+03-06 02:10 werkzeug     WARNING   * Debugger is active!
+03-06 02:10 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:10 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:10:20] "[35m[1mPOST /api/cow HTTP/1.1[0m" 500 -
+03-06 02:11 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:11 werkzeug     INFO      * Restarting with stat
+03-06 02:11 werkzeug     WARNING   * Debugger is active!
+03-06 02:11 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:11 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:11 werkzeug     INFO      * Restarting with stat
+03-06 02:11 werkzeug     WARNING   * Debugger is active!
+03-06 02:11 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:11 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:11:27] "[35m[1mPOST /api/cow HTTP/1.1[0m" 500 -
+03-06 02:12 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:12 werkzeug     INFO      * Restarting with stat
+03-06 02:12 werkzeug     WARNING   * Debugger is active!
+03-06 02:12 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:12 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:12 werkzeug     INFO      * Restarting with stat
+03-06 02:12 werkzeug     WARNING   * Debugger is active!
+03-06 02:12 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:12 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:12:23] "[35m[1mPOST /api/cow HTTP/1.1[0m" 201 -
+03-06 02:12 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:12:46] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:13 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:13:21] "[35m[1mPOST /api/cow HTTP/1.1[0m" 201 -
+03-06 02:13 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:13:41] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:16 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:16 werkzeug     INFO      * Restarting with stat
+03-06 02:16 werkzeug     WARNING   * Debugger is active!
+03-06 02:16 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:16 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:16 werkzeug     INFO      * Restarting with stat
+03-06 02:16 werkzeug     WARNING   * Debugger is active!
+03-06 02:16 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:18 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/cow_schema.py', reloading
+03-06 02:18 werkzeug     INFO      * Restarting with stat
+03-06 02:18 werkzeug     WARNING   * Debugger is active!
+03-06 02:18 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:19 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:19 werkzeug     INFO      * Restarting with stat
+03-06 02:19 werkzeug     WARNING   * Debugger is active!
+03-06 02:19 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:19 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:19:24] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:20 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/feeding_schema.py', reloading
+03-06 02:20 werkzeug     INFO      * Restarting with stat
+03-06 02:20 werkzeug     WARNING   * Debugger is active!
+03-06 02:20 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:21 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:21:15] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:21 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/feeding_schema.py', reloading
+03-06 02:21 werkzeug     INFO      * Restarting with stat
+03-06 02:21 werkzeug     WARNING   * Debugger is active!
+03-06 02:21 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:22 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/milk_prod_schema.py', reloading
+03-06 02:22 werkzeug     INFO      * Restarting with stat
+03-06 02:22 werkzeug     WARNING   * Debugger is active!
+03-06 02:22 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:22 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/milk_prod_schema.py', reloading
+03-06 02:22 werkzeug     INFO      * Restarting with stat
+03-06 02:22 werkzeug     WARNING   * Debugger is active!
+03-06 02:22 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:23 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/weight_schema.py', reloading
+03-06 02:23 werkzeug     INFO      * Restarting with stat
+03-06 02:23 werkzeug     WARNING   * Debugger is active!
+03-06 02:23 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:23 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/weight_schema.py', reloading
+03-06 02:23 werkzeug     INFO      * Restarting with stat
+03-06 02:23 werkzeug     WARNING   * Debugger is active!
+03-06 02:23 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:23 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:23:19] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:23 werkzeug     INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+03-06 02:23 werkzeug     INFO     [33mPress CTRL+C to quit[0m
+03-06 02:23 werkzeug     INFO      * Restarting with stat
+03-06 02:23 werkzeug     WARNING   * Debugger is active!
+03-06 02:23 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:23 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:23:54] "[35m[1mPOST /api/cow HTTP/1.1[0m" 201 -
+03-06 02:24 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:24:24] "[35m[1mPOST /api/cow HTTP/1.1[0m" 201 -
+03-06 02:24 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:24:40] "GET /api/cow HTTP/1.1" 200 -
+03-06 02:26 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/schemas/cow_schema.py', reloading
+03-06 02:26 werkzeug     INFO      * Restarting with stat
+03-06 02:26 werkzeug     WARNING   * Debugger is active!
+03-06 02:26 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:30 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:30:39] "[33mGET /api/cow/dame HTTP/1.1[0m" 404 -
+03-06 02:30 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/api.py', reloading
+03-06 02:30 werkzeug     INFO      * Restarting with stat
+03-06 02:31 werkzeug     WARNING   * Debugger is active!
+03-06 02:31 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:31 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:31:06] "[33mGET /api/cow/dame HTTP/1.1[0m" 404 -
+03-06 02:31 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f84806efbd0>
+03-06 02:31 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:31:15] "GET /api/cow/2 HTTP/1.1" 200 -
+03-06 02:36 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:36:05] "[31m[1mDELETE /api/cow/2 HTTP/1.1[0m" 405 -
+03-06 02:36 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:36 werkzeug     INFO      * Restarting with stat
+03-06 02:36 werkzeug     WARNING   * Debugger is active!
+03-06 02:36 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:36 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f09a0a18c90>
+03-06 02:36 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:36:43] "GET /api/cow/2 HTTP/1.1" 200 -
+03-06 02:36 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:36:52] "[35m[1mDELETE /api/cow/2 HTTP/1.1[0m" 204 -
+03-06 02:36 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:36:59] "[33mGET /api/cow/2 HTTP/1.1[0m" 404 -
+03-06 02:38 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:38 werkzeug     INFO      * Restarting with stat
+03-06 02:38 werkzeug     WARNING   * Debugger is active!
+03-06 02:38 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:39 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7feb3db72890>
+03-06 02:39 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:39:19] "GET /api/cow/3 HTTP/1.1" 200 -
+03-06 02:41 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:41:08] "[35m[1mPATCH /api/cow/3 HTTP/1.1[0m" 500 -
+03-06 02:43 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:43 werkzeug     INFO      * Restarting with stat
+03-06 02:43 werkzeug     WARNING   * Debugger is active!
+03-06 02:43 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:43 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:43:44] "[35m[1mPATCH /api/cow/3 HTTP/1.1[0m" 500 -
+03-06 02:44 werkzeug     INFO      * Detected change in '/workspaces/Nndap/farm_api/resources/cows_resource.py', reloading
+03-06 02:44 werkzeug     INFO      * Restarting with stat
+03-06 02:44 werkzeug     WARNING   * Debugger is active!
+03-06 02:44 werkzeug     INFO      * Debugger PIN: 912-451-781
+03-06 02:45 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f0f217d2990>
+03-06 02:45 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:45:00] "GET /api/cow/3 HTTP/1.1" 200 -
+03-06 02:45 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:45:14] "PATCH /api/cow/3 HTTP/1.1" 200 -
+03-06 02:45 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f0f215cbb10>
+03-06 02:45 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:45:41] "GET /api/cow/3 HTTP/1.1" 200 -
+03-06 02:45 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f0f215b2390>
+03-06 02:45 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:45:43] "GET /api/cow/3 HTTP/1.1" 200 -
+03-06 02:45 farm_api.resources.cows_resource INFO     Cow retrieved from database <farm_api.schemas.cow_schema.CowSchema object at 0x7f0f215c0790>
+03-06 02:45 werkzeug     INFO     127.0.0.1 - - [06/Mar/2023 02:45:44] "GET /api/cow/3 HTTP/1.1" 200 -
