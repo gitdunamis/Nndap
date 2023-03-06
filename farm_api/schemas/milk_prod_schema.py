@@ -1,10 +1,9 @@
-from marshmallow import Schema, fields, post_load
 import json_fix
 
 class MilkProductionSchema(object):
-    last_milk = fields.String( attribute="milk_prod_last_milk")
-    cron_schedule = fields.String( attribute="milk_prod_cron_schedule")
-    amount_l = fields.Integer(attribute="milk_prod_amount_l")
+    last_milk : str
+    cron_schedule : str
+    amount_l : int
 
     
     def __json__(self) :

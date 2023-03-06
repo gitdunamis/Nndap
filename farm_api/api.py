@@ -14,7 +14,7 @@ from farm_api.resources.cows_resource import CowsResource, COWS_ENDPOINT
 
 
 # def create_app():
-def create_app(db_location):
+def create_app(db_location, *args):
 
     """
     Function that creates our Flask application.
@@ -38,7 +38,7 @@ def create_app(db_location):
     with app.app_context():
         db.create_all()
     api = Api(app)
-    api.add_resource(CowsResource, COWS_ENDPOINT, f"{COWS_ENDPOINT}/<id>")
+    api.add_resource(CowsResource, COWS_ENDPOINT, f"{COWS_ENDPOINT}/<int:id>")
     return app
 
 
