@@ -8,6 +8,7 @@ from farm_api.models.cow import Cow
 import json
 
 
+
 class CowSchema(object):
     """
     Cow Marshmallow Schema
@@ -25,8 +26,8 @@ class CowSchema(object):
     has_calves : bool
 
     def dump(self):
-        return json.dumps(self, default=lambda o: o.__dict__, 
-            sort_keys=True, indent=4)
+        return self.__dict__
+        # return json.dumps(self, default=vars)
 
 # class Object:
 #     def toJSON(self):
