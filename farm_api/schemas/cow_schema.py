@@ -1,16 +1,17 @@
 from farm_api.models.cow import Cow
 import json
+import datetime
 
 
 
-class CowSchema(object):
+class CowSchema():
     """
     Schema used for loading/dumping Cows
     """
     cow_id : int
     name : str
     sex : str
-    birthdate : str
+    birthdate : datetime
     condition : str
     weight  = None
     feeding = None

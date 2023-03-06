@@ -1,7 +1,8 @@
+import datetime
 
 class WeightSchema(object):
     mass_kg : int
-    last_measured : str
+    last_measured : datetime
 
 
     def __json__(self) :
