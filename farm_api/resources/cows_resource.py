@@ -1,9 +1,11 @@
+from datetime import datetime
 import logging
 
 from flask import request
 from flask_restful import Resource, abort
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import NoResultFound
+from marshmallow import ValidationError
 
 from farm_api.database import db
 from farm_api.models.cow import Cow
@@ -39,16 +41,16 @@ class CowsResource(Resource):
         if not cow:
             raise NoResultFound()
 
-        cow_json = self.cow_to_schema(cow)
+        cow_json = CowSchema.dump(self.cow_to_schema(cow))
 
         logger.info(f"Cow retrieved from database {cow_json}")
-        return cow_json.dump()
+        return cow_json
 
     def _get_all_cows(self):
       
         cows = Cow.query.all()
 
-        cows_json = [self.cow_to_schema(cow).dump() for cow in cows]
+        cows_json = [ CowSchema().dump(self.cow_to_schema(cow)) for cow in cows]
         logger.info("Cows successfully retrieved.", cows_json)
         return cows_json
 
@@ -67,12 +69,18 @@ class CowsResource(Resource):
 
         data = request.get_json()
 
-        cow = self.schema_to_cow(data)
+        try:
+            cow = self.schema_to_cow(data)
+        except ValidationError as e:
+            return {
+                "error" : e.messages
+            }, 400
+
 
         try:
             db.session.add(cow)
             db.session.commit()
-            cow_json = self.cow_to_schema(cow).dump()
+            cow_json = CowSchema().dump(self.cow_to_schema(cow))
         except IntegrityError as e:
             logger.warning(
                 f"Integrity Error, this team is already in the database. Error: {e}"
@@ -93,7 +101,7 @@ class CowsResource(Resource):
         if 'sex' in request.json:
             cow.sex = request.json['sex']
 
-        cow_json = self.cow_to_schema(cow).dump()
+        cow_json = CowSchema().dump(self.cow_to_schema(cow))
 
         db.session.commit()
         return cow_json
@@ -101,7 +109,7 @@ class CowsResource(Resource):
     def cow_to_schema(self, cow:Cow) -> CowSchema:
         new_cow = CowSchema()
         new_cow.cow_id = cow.cow_id
-        new_cow.birthdate = cow.birthdate
+        new_cow.birthdate = datetime.strptime(cow.birthdate, '%Y')  #change format to '%Y-%m-%d %H:%M:%S'
         new_cow.name = cow.name
         new_cow.has_calves = cow.has_calves
         new_cow.condition = cow.condition
@@ -109,17 +117,17 @@ class CowsResource(Resource):
 
 
         weight = WeightSchema()
-        weight.cron_schedule = cow.weight_last_measured
-        weight.last_measured = cow.weight_mass_kg
+        weight.cron_schedule = cow.milk_prod_cron_schedule
+        weight.last_measured = datetime.strptime(cow.weight_last_measured, '%Y') #change format to '%Y-%m-%d %H:%M:%S'
 
         feeding = FeedingSchema()
         feeding.cron_schedule = cow.feeding_cron_schedule
-        feeding.last_measured = cow.feeding_last_measured
+        feeding.last_measured = datetime.strptime(cow.feeding_last_measured, '%Y') #change format to '%Y-%m-%d %H:%M:%S'
         feeding.amount_kg = cow.feeding_amount_kg
 
         milk_production = MilkProductionSchema()
         milk_production.amount_l = cow.milk_prod_amount_l
-        milk_production.last_milk = cow.milk_prod_last_milk
+        milk_production.last_milk = datetime.strptime(cow.milk_prod_last_milk, '%Y') #change format to '%Y-%m-%d %H:%M:%S'
         milk_production.cron_schedule = cow.milk_prod_cron_schedule
 
         new_cow.feeding = feeding
@@ -127,8 +135,13 @@ class CowsResource(Resource):
         new_cow.weight = weight
 
         return new_cow
+    
+    def validate(self, data: dict) -> None:
+        CowSchema().load(data)
 
     def schema_to_cow(self, data: dict) -> Cow:
+        self.validate(data)
+
         new_cow = Cow()
         new_cow.birthdate = data['birthdate']
         new_cow.name = data['name']

@@ -1,13 +1,10 @@
-import json_fix
+from farm_api.helper import validate_cron
+from marshmallow import Schema, fields
 
-class MilkProductionSchema(object):
-    last_milk : str
-    cron_schedule : str
-    amount_l : int
-
-    
-    def __json__(self) :
-        return self.__dict__
+class MilkProductionSchema(Schema):
+    last_milk = fields.DateTime()
+    cron_schedule = fields.String(required=True, validate = validate_cron)    
+    amount_l = fields.Int()
 
 
 

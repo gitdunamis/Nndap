@@ -3,7 +3,7 @@
 
 # {
 #     "name": "Camel",
-#     "sex": "Female",
+#     "sex": "female",
 #     "birthdate": "2022",
 #     "condition": "unhealthy",
 #     "weight": {
@@ -26,15 +26,15 @@
 
 
 
-GET http://127.0.0.1:5000/api/cow/3
+GET http://127.0.0.1:5000/api/cow
 
-# DELETE http://127.0.0.1:5000/api/cow/2
+# # DELETE http://127.0.0.1:5000/api/cow/2
 
-# PATCH http://127.0.0.1:5000/api/cow/3
-# content-type: application/json
+# # PATCH http://127.0.0.1:5000/api/cow/3
+# # content-type: application/json
 
-# {
-#     "name" : "Japheth",
-#     "sex" : "hermaphrodite"
-# }
+# # {
+# #     "name" : "Japheth",
+# #     "sex" : "hermaphrodite"
+# # }
 

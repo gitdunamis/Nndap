@@ -1,10 +1,7 @@
 import datetime
+from marshmallow import Schema, fields
 
-class WeightSchema(object):
-    mass_kg : int
-    last_measured : datetime
-
-
-    def __json__(self) :
-        return self.__dict__
+class WeightSchema(Schema):
+    mass_kg = fields.Int(required = True)
+    last_measured = fields.DateTime(required=True)
 
